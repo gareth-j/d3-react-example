@@ -5,19 +5,15 @@ This README expects a basic understanding of the command line and will work on W
 ### Get started
 
 To run the project you'll need to install nodeJS which supplies the `npm` package management tool we'll use below to install
-the libraries we need to run the project.
+the libraries we need to run the project. For installation instructions see [https://nodejs.org/en/](https://nodejs.org/en/). 
 
-For installation instructions please visit [https://nodejs.org/en/](https://nodejs.org/en/)
-
-Once you have npm installed you can
-
-In the project directory, you can run:
+Once you have npm installed run
 
 ```
 npm install
 ```
 
-This command might take a little while to run but once it has completed it will have created a `node_modules` folder which contains
+This command might take a short while to run but once it has completed it will have created a `node_modules` folder which contains
 all the JS libraries we need to run the project.
 
 ### Run
@@ -44,6 +40,14 @@ npm test
 ```
 
 This will run the tests in an interactive mode. Once the tests have run you can press `q` to exit the test session.
+
+### GitHub actions
+
+GitHub actions let us test code we write each time we commit and push code to our repo. This is a good way to ensure that the code you commit is correct. We configure actions using configuration files written in YAML that are located in `.github/workflows/`. See the [the documentation for more details](https://docs.github.com/en/free-pro-team@latest/actions).
+
+### Try it out
+
+See a live version of the app at [https://gareth-j.github.io/d3-react-example/](https://gareth-j.github.io/d3-react-example/)
 
 ### Learn React
 
