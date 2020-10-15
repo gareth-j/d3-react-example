@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/d3-react-example/static/css/main.a15078f8.chunk.css",
+    "main.js": "/d3-react-example/static/js/main.541a2fe0.chunk.js",
+    "main.js.map": "/d3-react-example/static/js/main.541a2fe0.chunk.js.map",
+    "runtime-main.js": "/d3-react-example/static/js/runtime-main.342b46f9.js",
+    "runtime-main.js.map": "/d3-react-example/static/js/runtime-main.342b46f9.js.map",
+    "static/css/2.391527b9.chunk.css": "/d3-react-example/static/css/2.391527b9.chunk.css",
+    "static/js/2.7953c8b7.chunk.js": "/d3-react-example/static/js/2.7953c8b7.chunk.js",
+    "static/js/2.7953c8b7.chunk.js.map": "/d3-react-example/static/js/2.7953c8b7.chunk.js.map",
+    "index.html": "/d3-react-example/index.html",
+    "precache-manifest.62698b18349137e8a7dbad10dc2bb625.js": "/d3-react-example/precache-manifest.62698b18349137e8a7dbad10dc2bb625.js",
+    "service-worker.js": "/d3-react-example/service-worker.js",
+    "static/css/2.391527b9.chunk.css.map": "/d3-react-example/static/css/2.391527b9.chunk.css.map",
+    "static/css/main.a15078f8.chunk.css.map": "/d3-react-example/static/css/main.a15078f8.chunk.css.map",
+    "static/js/2.7953c8b7.chunk.js.LICENSE.txt": "/d3-react-example/static/js/2.7953c8b7.chunk.js.LICENSE.txt",
+    "static/media/all.min.css": "/d3-react-example/static/media/fa-solid-900.8e1ed89b.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.342b46f9.js",
+    "static/css/2.391527b9.chunk.css",
+    "static/js/2.7953c8b7.chunk.js",
+    "static/css/main.a15078f8.chunk.css",
+    "static/js/main.541a2fe0.chunk.js"
+  ]
+}

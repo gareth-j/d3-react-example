@@ -1,0 +1,8 @@
+{
+  "short_name": "d3-react-example",
+  "name": "d3-react-example force graph",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
