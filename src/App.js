@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './data/data.json';
+
 import { ForceGraph } from "./components/forceGraph";
 import './App.css';
 
@@ -10,7 +10,7 @@ function App() {
         A simple force graph
       </header>
       <section className="Main">
-        <ForceGraph linksData={data.links} nodesData={data.nodes}/>
+        <ForceGraph/>
       </section>
     </div>
   );

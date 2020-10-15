@@ -1,8 +1,13 @@
 import * as d3 from "d3";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import styles from "./forceGraph.module.css";
+import data from "../data/data.json"
 
-export function runForceGraph(container, linksData, nodesData) {
+export function runForceGraph(container) {
+
+ const linksData = data.links
+ const nodesData = data.nodes
+
   const links = linksData.map((d) => Object.assign({}, d));
   const nodes = nodesData.map((d) => Object.assign({}, d));
 
