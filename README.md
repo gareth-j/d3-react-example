@@ -1,4 +1,6 @@
 ## A very simple force graph
+![Node.js CI](https://github.com/gareth-j/d3-react-example/workflows/Node.js%20CI/badge.svg) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 This README expects a basic understanding of the command line and will work on Windows, macOS and Linux.
 
