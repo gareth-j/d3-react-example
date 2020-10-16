@@ -27,7 +27,7 @@ jobs:
     # Install the modules we want in continuous integration mode
     - run: npm ci
     # Run the tests
-    - run: npm test-ci
+    - run: npm run test-ci
     # Build the app for deployment
     - run: npm run build --if-present
     - run: bash gh-deploy.sh
