@@ -49,6 +49,10 @@ GitHub actions let us test code we write each time we commit and push code to ou
 
 See a live version of the app at [https://gareth-j.github.io/d3-react-example/](https://gareth-j.github.io/d3-react-example/)
 
+### Edit
+
+The data to create the force graph is stored in `src/data/data.json`. To add a new node create a new record in the `nodes` array with a unique id and name. To link this new node to others create a new record in the `links` array with the `source` value being the id of the node at one end of the link/edge and the target being the id of the node at the other end.
+
 ### Learn React
 
 The [React documentation](https://reactjs.org/docs/getting-started.html) contains everything you need to get started with React.

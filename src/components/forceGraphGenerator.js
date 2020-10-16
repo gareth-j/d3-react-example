@@ -4,17 +4,16 @@ import styles from "./forceGraph.module.css";
 import data from "../data/data.json"
 
 export function runForceGraph(container) {
-
- const linksData = data.links
- const nodesData = data.nodes
-
-  const links = linksData.map((d) => Object.assign({}, d));
-  const nodes = nodesData.map((d) => Object.assign({}, d));
+  const links  = data.links;
+  const nodes = data.nodes;
 
   const containerRect = container.getBoundingClientRect();
   const height = containerRect.height;
   const width = containerRect.width;
 
+  // Controls how the simulation behaves when a node is dragged
+  // For the meaning of alphaTarget etc see
+  // https://github.com/d3/d3-force#simulation_alphaTarget
   const drag = (simulation) => {
     const dragstarted = (d) => {
       if (!d3.event.active) simulation.alphaTarget(0.3).restart();
@@ -51,6 +50,7 @@ export function runForceGraph(container) {
   }
   const div = d3.select("#graph-tooltip");
 
+  // Function to add the tooltip over the node on mouseover
   const addTooltip = (d) => {
     div.transition().duration(200).style("opacity", 0.9);
     const html = `<div><b>${d.name}</b></div>`;
@@ -60,6 +60,8 @@ export function runForceGraph(container) {
       .style("top", `${d3.event.pageY - 28}px`);
   };
 
+  // Function to remove the tooltip after the mouse moves
+  // off the node
   const removeTooltip = () => {
     div.transition().duration(200).style("opacity", 0);
   };
@@ -88,7 +90,8 @@ export function runForceGraph(container) {
         svg.attr("transform", d3.event.transform);
       })
     );
-
+  
+  // Setup the link style
   const link = svg
     .append("g")
     .attr("stroke", "#999")
@@ -97,7 +100,9 @@ export function runForceGraph(container) {
     .data(links)
     .join("line")
     .attr("stroke-width", (d) => Math.sqrt(d.value));
-
+    
+  // Setup the node with the side of the nodes
+  // their fill colour, text style etc
   const node = svg
     .append("g")
     .attr("stroke", "#fff")
@@ -105,8 +110,10 @@ export function runForceGraph(container) {
     .selectAll("circle")
     .data(nodes)
     .join("circle")
+    // Controls the radius of the node circles
     .attr("r", 32)
-    .attr("fill", "#808080")
+    // Set the colour of the node fill
+    .attr("fill", "#457b9d")
     .call(drag(simulation));
 
   const label = svg
@@ -119,10 +126,10 @@ export function runForceGraph(container) {
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "central")
     .style("fill", "white")
+    .style("font", "2vh serif")
     .text((d) => {
       return d.name;
     })
-
     .call(drag(simulation));
 
   label
@@ -132,7 +139,8 @@ export function runForceGraph(container) {
     .on("mouseout", () => {
       removeTooltip();
     });
-
+  
+  // A tick is a single iteration of the simulation
   simulation.on("tick", () => {
     // Update link positions
     link
