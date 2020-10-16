@@ -28,7 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-ci": "react-scripts test --watchAll=false --coverage --coverageReporters=cobertura --reporters=default --reporters=jest-junit",
+    "test-ci": "react-scripts test --watchAll=false --coverage --coverageReporters=cobertura --reporters=default",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
